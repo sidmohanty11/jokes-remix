@@ -1,3 +1,5 @@
+import { LiveReload } from "remix";
+
 const App = () => {
   return (
     <html>
@@ -7,8 +9,10 @@ const App = () => {
       </head>
       <body>
         <div>
-          <h1>HELLO WORLD!!!</h1>
+          <h1>HELLO WORLD!!!!</h1>
         </div>
+
+        {process.env.NODE_ENV === "development" && <LiveReload />}
       </body>
     </html>
   );
