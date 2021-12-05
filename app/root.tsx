@@ -1,17 +1,26 @@
-import { LiveReload } from "remix";
+import { Links, LiveReload, Outlet, LinksFunction } from "remix";
+import stylesUrl from "./styles/global.css";
+
+export const links: LinksFunction = () => {
+  return [
+    {
+      rel: "stylesheet",
+      href: stylesUrl,
+    },
+  ];
+};
 
 const App = () => {
   return (
     <html>
       <head>
         <meta charSet="utf-8" />
-        <title>Hello</title>
+        <title>Remix App</title>
+        <Links />
       </head>
       <body>
-        <div>
-          <h1>HELLO WORLD!!!!</h1>
-        </div>
-
+        <h1>JOKES!</h1>
+        <Outlet />
         {process.env.NODE_ENV === "development" && <LiveReload />}
       </body>
     </html>
