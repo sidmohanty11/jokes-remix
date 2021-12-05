@@ -3,12 +3,11 @@ const NewJoke = () => {
     <div>
       new joke
       <form method="POST">
-        <div>
-          <label htmlFor="name">Name: </label>
-          <input placeholder="name" id="name" />
-          <label htmlFor="content">Content: </label>
-          <textarea id="content" placeholder="content"></textarea>
-        </div>
+        <label htmlFor="name">Name: </label>
+        <input placeholder="name" id="name" />
+        <label htmlFor="content">Content: </label>
+        <textarea id="content" placeholder="content"></textarea>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
